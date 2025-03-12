@@ -18,14 +18,43 @@
         }
 
         /* Background Video */
-        .bg-video {
+        .video-container {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
             z-index: -1;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* App Name & Logo */
+        .app-header {
+            margin-top: 20px;
+            z-index: 10;
+        }
+
+        .app-header img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .app-title {
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: 0 0 10px #00ff00;
+        }
+
+        /* Hacker Border Animation */
+        @keyframes border-glow {
+            0% { box-shadow: 0 0 5px #00ff00; }
+            50% { box-shadow: 0 0 20px #ff0000; }
+            100% { box-shadow: 0 0 5px #00ff00; }
         }
 
         .container {
@@ -35,32 +64,9 @@
             border: 3px solid #00ff00;
             border-radius: 10px;
             animation: border-glow 1.5s infinite alternate;
-            background: rgba(0, 0, 0, 0.8);
-            position: relative;
         }
 
-        .logo {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin-bottom: 10px;
-            border: 2px solid white;
-        }
-
-        .app-name {
-            font-size: 22px;
-            font-weight: bold;
-            text-shadow: 0 0 10px #00ff00;
-        }
-
-        .notice {
-            font-size: 16px;
-            color: yellow;
-            font-weight: bold;
-            margin-bottom: 10px;
-            text-shadow: 0 0 5px yellow;
-        }
-
+        /* Input Box (Only 3 Digits) */
         .input-box {
             font-size: 18px;
             padding: 10px;
@@ -72,6 +78,11 @@
             text-align: center;
         }
 
+        .input-box:focus {
+            outline: none;
+        }
+
+        /* Button */
         .button {
             background: #00ff00;
             color: black;
@@ -82,6 +93,7 @@
             font-size: 18px;
         }
 
+        /* Loading Animation */
         .loading {
             font-size: 22px;
             color: yellow;
@@ -95,6 +107,7 @@
             100% { opacity: 1; }
         }
 
+        /* Prediction Box */
         .prediction-box {
             font-size: 25px;
             font-weight: bold;
@@ -106,67 +119,82 @@
             text-shadow: 0 0 10px #00ff00;
         }
 
-        .important-text {
-            font-size: 14px;
-            color: orange;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-
-        .telegram-link {
+        /* Color Buttons */
+        .color-button {
+            width: 80px;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
             font-size: 16px;
-            color: cyan;
-            font-weight: bold;
-            margin-top: 10px;
-            display: inline-block;
-            text-decoration: none;
-            border: 2px solid cyan;
-            padding: 5px 10px;
-            border-radius: 5px;
+            color: white;
+            margin-left: 10px;
+            cursor: pointer;
+            animation: border-glow 1s infinite alternate;
         }
 
-        .green { color: #00ff00; }
-        .red { color: #ff0000; }
-    </style><script type='text/javascript' src='//separatelysmackfibber.com/19/5c/18/195c186416f0a12831ae2a4ee87763df.js'></script>
+        /* Random Green & Red Colors */
+        .green { background-color: #00ff00; }
+        .red { background-color: #ff0000; }
+
+        /* Floating Skull Effect */
+        .skull {
+            position: absolute;
+            font-size: 30px;
+            animation: floatUp 1.5s linear forwards;
+            pointer-events: none;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-100px); opacity: 0; }
+        }
+    </style>
+
+
+<script type='text/javascript' src='//separatelysmackfibber.com/19/5c/18/195c186416f0a12831ae2a4ee87763df.js'></script>
+
+
 </head>
 <body>
 
     <!-- Background Video -->
-    <video class="bg-video" autoplay muted loop>
-        <source src="https://v1.pinimg.com/videos/iht/720p/99/20/78/9920780db2e79e173be96052589541a1.mp4" type="video/mp4">
-    </video>
+    <div class="video-container">
+        <video autoplay loop muted id="bg-video">
+            <source src="https://v1.pinimg.com/videos/iht/720p/99/20/78/9920780db2e79e173be96052589541a1.mp4" type="video/mp4">
+        </video>
+    </div>
 
-    <!-- Background Sound -->
-    <audio id="bg-music" loop autoplay>
-        <source src="https://cdn.pixabay.com/download/audio/2024/02/12/audio_b76a181f73.mp3?filename=dark-evil-ghost-190769.mp3" type="audio/mp3">
-    </audio>
+    <!-- App Name & Logo -->
+    <div class="app-header">
+        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=208,fit=crop,q=95/YleMeN35DxF1pBEj/h5setting_202402261158175271-AE0p0X0KPlTrjrex.png" alt="App Logo">
+        <div class="app-title">BDT Signal Cracker ☠️</div>
 
+<marquee direction="left">
+  <h3>
+    <a href="https://t.me/vip_hack25" target="_blank">
+      👉🏻 Single kaj korate new account create korun 👈🏻
+    </a>
+  </h3>
+</marquee>
+
+
+    </div>
+    <!-- Main Content -->
     <div class="container">
-        <!-- Logo -->
-        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=208,fit=crop,q=95/YleMeN35DxF1pBEj/h5setting_202402261158175271-AE0p0X0KPlTrjrex.png" class="logo" alt="App Logo">
-
-        <!-- App Name -->
-        <div class="app-name">BDT SIGNAL CRACKER ☠️</div>
-
-        <!-- Notice -->
-        <div class="notice">🔴 Notice: Use at your own risk. No guarantees! 🟢</div>
-
-        <h3>Enter Last 3 Digits of Period 1 MIN ☠️</h3>
+        <h3>Enter Last 3 Digits of Period ☠️</h3>
         <input type="number" id="periodNumber" class="input-box" placeholder="e.g.123" maxlength="3" oninput="limitDigits(this)">
         <button class="button" onclick="generatePrediction()">CHECK</button>
 
         <div id="loading" class="loading">Loading... 💀</div>
         <div id="prediction" class="prediction-box"></div>
-
-        <!-- Important Text -->
-        <div class="important-text">⚠️ Predictions are not 100% accurate. Play wisely! ⚠️</div>
-
-        <!-- Telegram Link -->
-        <a href="https://t.me/vip_hack25" class="telegram-link" target="_blank"> 🔍 Scerch on telegram: Vip_hack25 🔗 Join Telegram</a>
     </div>
 
-    <!-- Touch Sound -->
-    <audio id="touch-sound">
+    <!-- Audio Elements -->
+    <audio id="telegramSound">
+        <source src="https://cdn.pixabay.com/download/audio/2024/02/12/audio_b76a181f73.mp3?filename=dark-evil-ghost-190769.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="clickSound">
         <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_5843a0ccc9.mp3?filename=muahaha-evil-laughter-83217.mp3" type="audio/mp3">
     </audio>
 
@@ -174,10 +202,9 @@
         function generatePrediction() {
             let predictionBox = document.getElementById("prediction");
             let loadingBox = document.getElementById("loading");
-            let touchSound = document.getElementById("touch-sound");
 
-            // Play touch sound
-            touchSound.play();
+            // Play Telegram Sound
+            document.getElementById("telegramSound").play();
 
             // Show loading animation for 5 seconds
             loadingBox.style.display = 'block';
@@ -189,16 +216,14 @@
                 let bigPercentage = Math.floor(Math.random() * 100);
                 let smallPercentage = 100 - bigPercentage;
                 let finalResult = (bigPercentage > smallPercentage) ? "BIG ☠️" : "SMALL 💀";
-
-                // Randomly select color for BIG & SMALL
-                let colors = ["🟢 GREEN", "🔴 RED"];
-                let finalColor = colors[Math.floor(Math.random() * colors.length)];
-                let colorClass = (finalColor === "🟢 GREEN") ? "green" : "red";
+                let finalColor = (bigPercentage > smallPercentage) ? "🟢 GREEN" : "🔴 RED";
+                let colorClass = (bigPercentage > smallPercentage) ? "green" : "red";
 
                 let resultText = `
                     BIG: ${bigPercentage}% | SMALL: ${smallPercentage}% <br>
                     RESULT: <b>${finalResult}</b> <br>
-                    COLOR: <b class="${colorClass}">${finalColor}</b> <br>
+                    COLOR: <b>${finalColor}</b> <br>
+                    
                 `;
 
                 predictionBox.innerHTML = resultText;
@@ -210,10 +235,94 @@
                 input.value = input.value.slice(0, 3);
             }
         }
-	    click on and support us 🙏🏻👇🏻
+
+        // Floating Skull Effect + Touch Sound
+        document.addEventListener('click', function (event) {
+            let skull = document.createElement("div");
+            skull.classList.add("skull");
+            skull.innerHTML = "💀";
+            skull.style.left = `${event.clientX}px`;
+            skull.style.top = `${event.clientY}px`;
+            document.body.appendChild(skull);
+            document.getElementById("clickSound").play();
+            setTimeout(() => skull.remove(), 1500);
+        });
+
     </script>
-	
-<script async="async" data-cfasync="false" src="//separatelysmackfibber.com/9836b306db829e2bea7ca60a527e5e79/invoke.js"></script>
-<div id="container-9836b306db829e2bea7ca60a527e5e79"></div>
+<!-- Add this inside the <body> tag, just before the closing </body> -->
+<a href="https://t.me/vip_hack25" target="_blank" class="telegram-float">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" class="telegram-icon">
+</a>
+
+<style>
+    /* Floating Telegram Button */
+    .telegram-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        z-index: 999;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+        animation: floatEffect 3s infinite alternate;
+    }
+
+    .telegram-icon {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    @keyframes floatEffect {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+        100% { transform: translateY(0); }
+    }
+</style>
+
+<div class="notice-box"> <h4>
+            <a href="https://t.me/vip_hack25" style="color: yellow; text-decoration: none;">
+                👉 Create a new account to get the signal working 👈🏻
+            </a> </h4>
+        </div>
+
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'af05649aa91a38c122cc1bfbb170d2ba',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//separatelysmackfibber.com/af05649aa91a38c122cc1bfbb170d2ba/invoke.js"></script>
+
+
+
+<div class="important-text"> <h3>
+            ⚠ **Amader App Niye Gurutto Purno Kotha** ⚠ <br>
+            ✅ **100% Automated Prediction System** <br>
+            ✅ **Safe & Secure Trading** <br>
+            ✅ **Updated Algorithms for Accuracy** <br>
+            ✅ **Trusted by Thousands of Users** <br>
+            📌 **Join our Telegram for Live Updates!**  </h3>
+        </div>
+    </div>
+
+
 </body>
 </html>
+
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'af05649aa91a38c122cc1bfbb170d2ba',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//separatelysmackfibber.com/af05649aa91a38c122cc1bfbb170d2ba/invoke.js"></script>
